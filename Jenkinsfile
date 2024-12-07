@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/420/jenkins-project.git', branch: 'main'
+                git url: 'https://github.com/rimat420/jenkins-project.git', branch: 'main'
                 sh 'ls -ltr'
             }
         }
