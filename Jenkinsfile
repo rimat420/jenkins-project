@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.9'  // Verwende ein Docker-Image mit Python und pip vorinstalliert
+        }
+    }
     
     stages {
 
