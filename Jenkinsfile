@@ -5,6 +5,7 @@ pipeline {
             steps {
                 git url: 'https://github.com/rimat420/jenkins-project.git', branch: 'main'
                 sh 'ls -ltr'
+		sh 'pwd'
             }
         }
         
