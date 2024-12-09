@@ -26,6 +26,7 @@ pipeline {
                             . venv/bin/activate
                             pytest
                         '''
+                        sh 'whoami'
                 // sh 'pytest'
                 // sh 'whoami'
             } // Ende von steps
