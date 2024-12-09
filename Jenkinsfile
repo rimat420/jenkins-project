@@ -11,7 +11,11 @@ pipeline {
         
         stage('Setup') {
             steps {
-                sh "pipx install -r requirements.txt"
+                sh '''
+                    python3 -m venv venv
+                    . venv/bin/activate
+                    pip install -r requirements.txt
+                '''
             }
         }        
         
