@@ -21,8 +21,12 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh 'pytest'
-                sh 'whoami'
+                        sh '''
+                            . venv/bin/activate
+                            pytest
+                        '''
+                // sh 'pytest'
+                // sh 'whoami'
             } // Ende von steps
         } // Ende von stage 'Test'
         
